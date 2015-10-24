@@ -114,4 +114,12 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="VideoController.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="VideoPanel.ui">
+      <Filter>Form Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
