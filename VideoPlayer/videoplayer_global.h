@@ -1,0 +1,12 @@
+#ifndef VIDEOPLAYER_GLOBAL_H
+#define VIDEOPLAYER_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef VIDEOPLAYER_LIB
+# define VIDEOPLAYER_EXPORT Q_DECL_EXPORT
+#else
+# define VIDEOPLAYER_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // VIDEOPLAYER_GLOBAL_H

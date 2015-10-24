@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoDisplay</class>
+ <widget class="QWidget" name="VideoDisplay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>849</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoDisplay</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,1">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QtAV::WidgetRenderer" name="showWidget" native="true">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QStackedWidget" name="controlStackedWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="PTZControllerWidget">
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="Gui::EmergingButton" name="leftupPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↖</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="Gui::EmergingButton" name="upPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↑</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="Gui::EmergingButton" name="rightupPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↗</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="Gui::EmergingButton" name="leftPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>←</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="Gui::EmergingButton" name="circlePushButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>123</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Resources/VideoGui.qrc">
+              <normaloff>:/新前缀/test.jpg</normaloff>:/新前缀/test.jpg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>177</width>
+              <height>158</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="default">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="Gui::EmergingButton" name="rightPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>→</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="Gui::EmergingButton" name="leftdownpushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↙</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="Gui::EmergingButton" name="downPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↓</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="Gui::EmergingButton" name="rightdownPushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>↘</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="playControllerWidget">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>212</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="Gui::EmergingWidget" name="palyWidget" native="true">
+            <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1" columnstretch="1,2,1,2,1,2,1,2,1">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>72</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="stopPushButton">
+               <property name="text">
+                <string>停止</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>46</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="lastPushButton">
+               <property name="text">
+                <string>上一个</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>45</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="5">
+              <widget class="QPushButton" name="playOrPausePushButton">
+               <property name="text">
+                <string>播放/暂停</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>46</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="7">
+              <widget class="QPushButton" name="nextPushButton">
+               <property name="text">
+                <string>下一个</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>72</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="yesterdayPushButton">
+               <property name="text">
+                <string>&lt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="8">
+              <widget class="QPushButton" name="tomorrowPushButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="7">
+              <widget class="QSlider" name="todayHorizontalSlider">
+               <property name="maximum">
+                <number>24</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="tickPosition">
+                <enum>QSlider::TicksAbove</enum>
+               </property>
+               <property name="tickInterval">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>211</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="panelWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>100</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="videoGroupBox">
+        <property name="title">
+         <string>视频种类</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="realtimeVideoPushButton">
+           <property name="text">
+            <string>实时视频</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="historicVideoPushButton">
+           <property name="text">
+            <string>历史视频</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="panelGroupBox">
+        <property name="title">
+         <string>视频面板</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QStackedWidget" name="panelStackedWidget">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <layout class="QVBoxLayout" name="verticalLayout_6" stretch="3,1,3,5">
+             <item>
+              <widget class="QWidget" name="panWidget" native="true">
+               <layout class="QGridLayout" name="gridLayout_3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="leftupPushButton_2">
+                  <property name="text">
+                   <string>↖</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="upPushButton_2">
+                  <property name="text">
+                   <string>↑</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="rightupPushButton_2">
+                  <property name="text">
+                   <string>↗</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="leftPushButton_2">
+                  <property name="text">
+                   <string>←</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="circlePushButton_2">
+                  <property name="text">
+                   <string>⊕</string>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="Resources/VideoGui.qrc">
+                    <normaloff>:/新前缀/test.jpg</normaloff>:/新前缀/test.jpg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="rightPushButton_2">
+                  <property name="text">
+                   <string>→</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="leftdownPushButton">
+                  <property name="text">
+                   <string>↙</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="downPushButton_2">
+                  <property name="text">
+                   <string>↓</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="rightdownPushButton_2">
+                  <property name="text">
+                   <string>↘</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="speedWidget" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5,1">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="decreaseLabel">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="speedHorizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="increaseLabel">
+                  <property name="text">
+                   <string>+</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="cameraWidget" native="true">
+               <layout class="QGridLayout" name="gridLayout_5">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="tiltDecreasePushButton">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="tiltLabel">
+                  <property name="text">
+                   <string>变倍</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="tiltIncreasePushButton">
+                  <property name="text">
+                   <string>+</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="zoomDecreasePushButton">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLabel" name="zoomLabel">
+                  <property name="text">
+                   <string>变焦</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QPushButton" name="zoomIncreasePushButton">
+                  <property name="text">
+                   <string>+</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="apertureDecreasePushButton">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLabel" name="apertureLabel">
+                  <property name="text">
+                   <string>光圈</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QPushButton" name="apertureIncreasePushButton">
+                  <property name="text">
+                   <string>+</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="colourWidget" native="true">
+               <layout class="QGridLayout" name="gridLayout_4">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="brightnessLabel">
+                  <property name="text">
+                   <string>亮度</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QSlider" name="brightnessHorizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="hueLabel">
+                  <property name="text">
+                   <string>色度</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSlider" name="hueHorizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSlider" name="contrastHorizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSlider" name="saturationHorizontalSlider">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="2">
+                 <widget class="QPushButton" name="defaultValuePushButton">
+                  <property name="text">
+                   <string>恢复默认值</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="contrastLabel">
+                  <property name="text">
+                   <string>对比度</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="saturationLabel">
+                  <property name="text">
+                   <string>饱和度</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <layout class="QVBoxLayout" name="verticalLayout_8" stretch="8,2,10">
+             <item>
+              <widget class="QCalendarWidget" name="calendarWidget"/>
+             </item>
+             <item>
+              <widget class="QWidget" name="durationWidget" native="true">
+               <layout class="QGridLayout" name="gridLayout_6" rowstretch="0,0" columnstretch="1,3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="fromLabel">
+                  <property name="text">
+                   <string>从</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QTimeEdit" name="fromTimeEdit">
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="toLabel">
+                  <property name="text">
+                   <string>到</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QTimeEdit" name="toTimeEdit">
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="time">
+                   <time>
+                    <hour>23</hour>
+                    <minute>59</minute>
+                    <second>59</second>
+                   </time>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QWidget" name="resualtWidget" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="searchPushButton">
+                  <property name="text">
+                   <string>查询</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="resualtListWidget"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Gui::EmergingButton</class>
+   <extends>QPushButton</extends>
+   <header>Emerging.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Gui::EmergingWidget</class>
+   <extends>QWidget</extends>
+   <header>Emerging.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QtAV::WidgetRenderer</class>
+   <extends>QWidget</extends>
+   <header>../Qt5AV/QtAV/WidgetRenderer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Resources/VideoGui.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>realtimeVideoPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>changeToRealtime()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>40</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>541</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>historicVideoPushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>changeToHistoric()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>541</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playOrPausePushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>VideoDisplay</receiver>
+   <slot>playOrPause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>237</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>516</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>changeToRealtime()</slot>
+  <slot>changeToHistoric()</slot>
+  <slot>playOrPause()</slot>
+ </slots>
+</ui>

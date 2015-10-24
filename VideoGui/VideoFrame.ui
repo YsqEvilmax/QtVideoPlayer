@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VideoFrame</class>
+ <widget class="QMainWindow" name="VideoFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1033</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VideoFrame</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="Gui::VideoDisplay" name="dispalyWidget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Gui::VideoDisplay</class>
+   <extends>QWidget</extends>
+   <header>VideoDisplay.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

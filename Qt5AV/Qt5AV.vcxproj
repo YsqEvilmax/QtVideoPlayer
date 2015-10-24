@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7D81758-B601-35EE-8436-123FF97F20CD}</ProjectGuid>
+    <RootNamespace>Qt5AV</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>..\lib_win_\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>..\.obj\Qt5AV_win_\</IntermediateDirectory>
+    <PrimaryOutput>Qt5AV1</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>..\lib_win_\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>..\.obj\Qt5AVd_win_\</IntermediateDirectory>
+    <PrimaryOutput>Qt5AVd1</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\lib_win_\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Qt5AV1</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Qt5AVd1</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;.;C:\QtAV-master;.\QtAV;.\compat\msvc;.\cuda;.\cuda\dllapi;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\..\.moc\5.4.0\Qt5AV;$(QTDIR)\mkspecs\win32-msvc2013;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -Zc:strictStrings -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\.obj\Qt5AV_win_\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QTAV_HAVE_WIDGETS=1;_CRT_SECURE_NO_WARNINGS;BUILD_QTAV_LIB;__STDC_CONSTANT_MACROS;QTAV_HAVE_DSOUND=1;QTAV_HAVE_CUDA=1;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;QT_OPENGL_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;avcodec.lib;avformat.lib;avutil.lib;swscale.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Qt5AV1.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>1.41</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QTAV_HAVE_WIDGETS=1;_CRT_SECURE_NO_WARNINGS;BUILD_QTAV_LIB;__STDC_CONSTANT_MACROS;QTAV_HAVE_DSOUND=1;QTAV_HAVE_CUDA=1;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy  "$(TargetPath)" "..\bin"</Command>
+      <Message>Copy Qt5AV1.dll to ..\bin</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);.\QtAV;.\GeneratedFiles\$(ConfigurationName);$(SolutionDir)\include;$(QTDIR)\include;.;.\compat\msvc;.\cuda;.\cuda\dllapi;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtCore;.\..\.moc\5.4.0\Qt5AVd;$(QTDIR)\mkspecs\win32-msvc2013;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QTAV_HAVE_WIDGETS=1;_CRT_SECURE_NO_WARNINGS;BUILD_QTAV_LIB;__STDC_CONSTANT_MACROS;QTAV_HAVE_DSOUND=1;QTAV_HAVE_CUDA=1;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_LIB;QT_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;avcodec.lib;avformat.lib;avutil.lib;swscale.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\Qt5AVd1.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>1.41</Version>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)/lib/Qt5AVd1.lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QTAV_HAVE_WIDGETS=1;_CRT_SECURE_NO_WARNINGS;BUILD_QTAV_LIB;__STDC_CONSTANT_MACROS;QTAV_HAVE_DSOUND=1;QTAV_HAVE_CUDA=1;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy  "$(TargetPath)" "..\bin"</Command>
+      <Message>Copy Qt5AVd1.dll to ..\bin</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AVClock.cpp" />
+    <ClCompile Include="AVCompat.cpp" />
+    <ClCompile Include="codec\AVDecoder.cpp" />
+    <ClCompile Include="AVDemuxThread.cpp" />
+    <ClCompile Include="AVDemuxer.cpp" />
+    <ClCompile Include="AVError.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_AudioOutput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AudioThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVClock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVDecoder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVDemuxer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVDemuxThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVPlayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AVThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Filter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FilterManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GraphicsItemRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LibAVFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OpenGLVideo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OutputSet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlayerSubtitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ShaderManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Subtitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SubtitleFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_VideoCapture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_VideoFrameExtractor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_VideoOutput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_VideoOutputEventFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_VideoThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WidgetRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_QtAV.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_shaders.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AudioOutput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AudioThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVClock.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVDecoder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVDemuxer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVDemuxThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVPlayer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AVThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Filter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FilterManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GraphicsItemRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LibAVFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OpenGLVideo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OutputSet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlayerSubtitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ShaderManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Subtitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SubtitleFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_VideoCapture.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_VideoFrameExtractor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_VideoOutput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_VideoOutputEventFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_VideoThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WidgetRenderer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="input\AVInput.cpp" />
+    <ClCompile Include="output\AVOutput.cpp" />
+    <ClCompile Include="AVPlayer.cpp" />
+    <ClCompile Include="AVPlayerPrivate.cpp" />
+    <ClCompile Include="AVThread.cpp" />
+    <ClCompile Include="codec\audio\AudioDecoder.cpp" />
+    <ClCompile Include="AudioFormat.cpp" />
+    <ClCompile Include="AudioFrame.cpp" />
+    <ClCompile Include="output\audio\AudioOutput.cpp" />
+    <ClCompile Include="output\audio\AudioOutputDSound.cpp" />
+    <ClCompile Include="output\audio\AudioOutputTypes.cpp" />
+    <ClCompile Include="AudioResampler.cpp" />
+    <ClCompile Include="AudioResamplerTypes.cpp" />
+    <ClCompile Include="AudioThread.cpp" />
+    <ClCompile Include="subtitle\CharsetDetector.cpp" />
+    <ClCompile Include="ColorTransform.cpp" />
+    <ClCompile Include="CommonTypes.cpp" />
+    <ClCompile Include="filter\Filter.cpp" />
+    <ClCompile Include="filter\FilterContext.cpp" />
+    <ClCompile Include="filter\FilterManager.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="utils\GPUMemCopy.cpp" />
+    <ClCompile Include="output\video\GraphicsItemRenderer.cpp" />
+    <ClCompile Include="ImageConverter.cpp" />
+    <ClCompile Include="ImageConverterFF.cpp" />
+    <ClCompile Include="filter\LibAVFilter.cpp" />
+    <ClCompile Include="utils\Logger.cpp" />
+    <ClCompile Include="utils\OpenGLHelper.cpp" />
+    <ClCompile Include="output\video\OpenGLRendererBase.cpp" />
+    <ClCompile Include="OpenGLVideo.cpp" />
+    <ClCompile Include="output\video\OpenGLWidgetRenderer.cpp" />
+    <ClCompile Include="output\video\OpenGLWindowRenderer.cpp" />
+    <ClCompile Include="output\OutputSet.cpp" />
+    <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="subtitle\PlainText.cpp" />
+    <ClCompile Include="subtitle\PlayerSubtitle.cpp" />
+    <ClCompile Include="input\QIODeviceInput.cpp" />
+    <ClCompile Include="output\video\QPainterRenderer.cpp" />
+    <ClCompile Include="QtAV_Global.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Statistics.cpp" />
+    <ClCompile Include="subtitle\Subtitle.cpp" />
+    <ClCompile Include="filter\SubtitleFilter.cpp" />
+    <ClCompile Include="subtitle\SubtitleProcessor.cpp" />
+    <ClCompile Include="subtitle\SubtitleProcessorFFmpeg.cpp" />
+    <ClCompile Include="VideoCapture.cpp" />
+    <ClCompile Include="codec\video\VideoDecoder.cpp" />
+    <ClCompile Include="codec\video\VideoDecoderCUDA.cpp" />
+    <ClCompile Include="codec\video\VideoDecoderFFmpeg.cpp" />
+    <ClCompile Include="codec\video\VideoDecoderFFmpegHW.cpp" />
+    <ClCompile Include="codec\video\VideoDecoderTypes.cpp" />
+    <ClCompile Include="VideoFormat.cpp" />
+    <ClCompile Include="VideoFrame.cpp" />
+    <ClCompile Include="VideoFrameExtractor.cpp" />
+    <ClCompile Include="output\video\VideoOutput.cpp" />
+    <ClCompile Include="output\video\VideoOutputEventFilter.cpp" />
+    <ClCompile Include="output\video\VideoRenderer.cpp" />
+    <ClCompile Include="output\video\VideoRendererTypes.cpp" />
+    <ClCompile Include="VideoShader.cpp" />
+    <ClCompile Include="VideoThread.cpp" />
+    <ClCompile Include="output\video\WidgetRenderer.cpp" />
+    <ClCompile Include="cuda\cuda_api.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtAV\AVClock.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVClock.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVClock.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\AVCompat.h" />
+    <CustomBuild Include="QtAV\AVDecoder.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVDecoder.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVDecoder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\AVDecoder_p.h" />
+    <CustomBuild Include="AVDemuxThread.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVDemuxThread.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVDemuxThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\AVDemuxer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVDemuxer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVDemuxer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AVError.h" />
+    <ClInclude Include="QtAV\AVInput.h" />
+    <ClInclude Include="QtAV\private\AVInput_p.h" />
+    <ClInclude Include="QtAV\AVOutput.h" />
+    <ClInclude Include="QtAV\private\AVOutput_p.h" />
+    <CustomBuild Include="QtAV\AVPlayer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVPlayer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVPlayer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="AVPlayerPrivate.h" />
+    <CustomBuild Include="AVThread.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AVThread.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AVThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="AVThread_p.h" />
+    <ClInclude Include="QtAV\AudioDecoder.h" />
+    <ClInclude Include="QtAV\AudioFormat.h" />
+    <ClInclude Include="QtAV\AudioFrame.h" />
+    <CustomBuild Include="QtAV\AudioOutput.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AudioOutput.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AudioOutput.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\AudioOutputTypes.h" />
+    <ClInclude Include="QtAV\private\AudioOutput_p.h" />
+    <ClInclude Include="QtAV\AudioResampler.h" />
+    <ClInclude Include="QtAV\AudioResamplerTypes.h" />
+    <ClInclude Include="QtAV\private\AudioResampler_p.h" />
+    <CustomBuild Include="AudioThread.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AudioThread.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AudioThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="utils\BlockingQueue.h" />
+    <ClInclude Include="subtitle\CharsetDetector.h" />
+    <ClInclude Include="QtAV\ColorTransform.h" />
+    <ClInclude Include="QtAV\CommonTypes.h" />
+    <ClInclude Include="QtAV\FactoryDefine.h" />
+    <CustomBuild Include="QtAV\Filter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Filter.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Filter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\FilterContext.h" />
+    <CustomBuild Include="filter\FilterManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing FilterManager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing FilterManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\Filter_p.h" />
+    <ClInclude Include="QtAV\Frame.h" />
+    <ClInclude Include="QtAV\private\Frame_p.h" />
+    <ClInclude Include="utils\GPUMemCopy.h" />
+    <CustomBuild Include="QtAV\GraphicsItemRenderer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing GraphicsItemRenderer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing GraphicsItemRenderer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\ImageConverter.h" />
+    <ClInclude Include="QtAV\ImageConverterTypes.h" />
+    <ClInclude Include="QtAV\private\ImageConverter_p.h" />
+    <CustomBuild Include="QtAV\LibAVFilter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing LibAVFilter.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing LibAVFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="utils\Logger.h" />
+    <ClInclude Include="utils\OpenGLHelper.h" />
+    <ClInclude Include="QtAV\OpenGLRendererBase.h" />
+    <ClInclude Include="QtAV\private\OpenGLRendererBase_p.h" />
+    <CustomBuild Include="QtAV\OpenGLVideo.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OpenGLVideo.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OpenGLVideo.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\OpenGLWidgetRenderer.h" />
+    <ClInclude Include="QtAV\OpenGLWindowRenderer.h" />
+    <CustomBuild Include="output\OutputSet.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OutputSet.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OutputSet.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\Packet.h" />
+    <ClInclude Include="subtitle\PlainText.h" />
+    <CustomBuild Include="QtAV\private\PlayerSubtitle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlayerSubtitle.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlayerSubtitle.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="input\QIODeviceInput.h" />
+    <ClInclude Include="QtAV\QPainterRenderer.h" />
+    <ClInclude Include="QtAV\private\QPainterRenderer_p.h" />
+    <ClInclude Include="QtAV\QtAV.h" />
+    <ClInclude Include="QtAV\QtAV_Global.h" />
+    <CustomBuild Include="ShaderManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ShaderManager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ShaderManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="utils\SharedPtr.h" />
+    <ClInclude Include="QtAV\Statistics.h" />
+    <CustomBuild Include="QtAV\Subtitle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Subtitle.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Subtitle.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\SubtitleFilter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SubtitleFilter.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SubtitleFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\private\SubtitleProcessor.h" />
+    <ClInclude Include="QtAV\SurfaceInterop.h" />
+    <CustomBuild Include="QtAV\VideoCapture.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VideoCapture.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VideoCapture.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\VideoDecoder.h" />
+    <ClInclude Include="QtAV\VideoDecoderFFmpegHW.h" />
+    <ClInclude Include="QtAV\private\VideoDecoderFFmpegHW_p.h" />
+    <ClInclude Include="QtAV\VideoDecoderTypes.h" />
+    <ClInclude Include="QtAV\private\VideoDecoder_p.h" />
+    <ClInclude Include="QtAV\VideoFormat.h" />
+    <ClInclude Include="QtAV\VideoFrame.h" />
+    <CustomBuild Include="QtAV\VideoFrameExtractor.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VideoFrameExtractor.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VideoFrameExtractor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\VideoOutput.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VideoOutput.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VideoOutput.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="output\video\VideoOutputEventFilter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VideoOutputEventFilter.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VideoOutputEventFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="QtAV\VideoRenderer.h" />
+    <ClInclude Include="QtAV\VideoRendererTypes.h" />
+    <ClInclude Include="QtAV\private\VideoRenderer_p.h" />
+    <ClInclude Include="QtAV\VideoShader.h" />
+    <ClInclude Include="QtAV\private\VideoShader_p.h" />
+    <CustomBuild Include="VideoThread.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VideoThread.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VideoThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="QtAV\WidgetRenderer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(QTDIR)\include" "-I." "-IC:\QtAV-master" "-I.\QtAV" "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AV" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing WidgetRenderer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQTAV_HAVE_WIDGETS=1 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_CUDA=1 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_OPENGL_LIB -DQT_DLL -D_WINDLL  "-I$(ProjectDir)\." "-I.\QtAV" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(SolutionDir)\include" "-I$(QTDIR)\include" "-I." "-I.\compat\msvc" "-I.\cuda" "-I.\cuda\dllapi" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtCore" "-I.\..\.moc\5.4.0\Qt5AVd" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-I$(QTDIR)\include\QtOpenGL"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing WidgetRenderer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="cuda\cuda_api.h" />
+    <ClInclude Include="QtAV\dptr.h" />
+    <ClInclude Include="QtAV\private\factory.h" />
+    <ClInclude Include="cuda\helper_cuda.h" />
+    <ClInclude Include="QtAV\private\mkid.h" />
+    <ClInclude Include="cuda\dllapi\nv_inc.h" />
+    <ClInclude Include="QtAV\private\prepost.h" />
+    <ClInclude Include="QtAV\private\singleton.h" />
+    <ClInclude Include="QtAV\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="GeneratedFiles\Debug\VideoDecoderFFmpeg.moc" />
+    <CustomBuild Include="GeneratedFiles\Debug\VideoDecoderCUDA.moc" />
+    <None Include="i18n\QtAV_zh_CN.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtAV.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\i18n\QtAV_zh_CN.qm;.\QtAV.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\i18n\QtAV_zh_CN.qm;.\QtAV.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="QtAV.svg">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="i18n\QtAV_zh_CN.qm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="shaders\planar.f.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="shaders\rgb.f.glsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <CustomBuild Include="shaders\shaders.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\shaders\planar.f.glsl;.\shaders\rgb.f.glsl;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\shaders\planar.f.glsl;.\shaders\rgb.f.glsl;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\QtAV-master\src\Qt5AV_resource.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="C:\QtAV-master\src\Qt5AVd_resource.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="msvc2013_opengl" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
